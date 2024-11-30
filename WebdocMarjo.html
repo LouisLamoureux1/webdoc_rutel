@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marjorie: Les saisons à la ferme</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #4c7022; /* Fond vert */
+      color: #ffffff; /* Texte blanc */
+      font-family: 'Italiana', serif;
+      margin: 0;
+      min-height: 100vh;
+      text-align: center; /* Centre tout le texte */
+    }
+
+    .side-menu {
+      background-color: #2C481D; /* Fond vert foncé */
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 3rem;
+      color: #ffffff;
+      text-align: center;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .nav-buttons {
+      display: none; /* Cache les boutons par défaut */
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .nav-buttons button {
+      background-color: #2C481D;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #4c7022;
+    }
+
+    .main-content {
+      padding: 30px;
+    }
+
+    .header-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .calendar-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .calendar-placeholder {
+      background-color: #cfcfcf;
+      color: #4c7022;
+      display: inline-block;
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    .farmer-icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .article-section {
+      margin-top: 40px;
+    }
+
+    .article-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .text-content {
+      line-height: 1.8;
+      text-align: center; /* Centre le texte de l'article */
+    }
+
+    .map-image {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Barre latérale -->
+      <nav class="col-md-1 col-12 side-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- Boutons supplémentaires -->
+        <div class="nav-buttons" id="nav-buttons">
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/webdochome.html">Accueil</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocEste.html">Inteview Avec les clients</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocLouis.html">Le groupe chapeau de paille</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/webdocarticle.html">Kilyann</a></button>
+        </div>
+      </nav>
+
+      <!-- Contenu principal -->
+      <main class="col-md-11 col-12 main-content">
+        <!-- Titre -->
+        <h1 class="header-title">
+          Marjorie: Les saisons à la ferme : <br> calendrier et rythmes de la nature
+        </h1>
+
+        <!-- Section Calendrier -->
+        <div class="calendar-section">
+          <img src="imgweb/calendrier.png" width="650" height="400"><img>
+          <img src="imgweb/fermier.webp" alt="Icône fermier" class="farmer-icon" width="350" height="350">
+        </div>
+
+        <!-- Section Article -->
+        <div class="article-section">
+          <div class="article-title">Article:</div>
+          <p class="text-content">
+            À la Ferme de Rutel, les saisons rythment la vie des agriculteurs <br>
+            Seine-et-Marne, à la Ferme de Rutel, chaque saison raconte une histoire différente. Du réveil du printemps aux premières pousses et aux récoltes de l’été, en passant par les préparations à l’automne et la pause hivernale, le calendrier de la ferme suit un rythme naturel où chaque mois a son importance.<br><br>
+            
+            Le printemps : la renaissance <br><br>
+            
+            Avec l’arrivée des premiers rayons de soleil et les feuilles qui poussent, la ferme s’anime. Les champs reprennent vie après la pause hivernale. <br>
+            Entre la plantation des fraises, des radis et des petits pois, et la préparation des sols pour les plantations de l’été, le printemps marque le début d’une période intense d’activité.<br>
+            C’est aussi la saison des premières récoltes. Dès avril, les visiteurs arrivent en masse pour cueillir les asperges, les fraises, épinard et radis qui colorent les champs. <br><br>
+            
+            L’été : l’apogée des récoltes<br><br>
+            
+            En juin, la Ferme de Rutel atteint son pic d’activité. Les allées de groseilliers et de cerisiers débordent de fruits mûrs, tandis que les légumes comme les tomates, courgettes et aubergines se multiplient sous le soleil.  L’été est une période intense marquée par des sécheresses.<br>
+            Les visiteurs viennent en famille pour remplir leurs paniers de produits frais, directement cueillis. C’est également le moment de l’année où les champs regorgent de plusieurs variétés de cultures, offrant donc une véritable palette de couleurs et de saveurs.<br>
+            L’automne : la transition<br><br>
+            
+            Avec des teintes dorées et orangées et ses matinées fraîches, l’automne annonce la fin du cycle agricole. Les citrouilles, potirons, butternuts et courges, grandes stars de la saison d’Halloween, elles envahissent les terres et attirent beaucoup de cueilleurs, marquant donc l’arrivée de l’hiver.<br>
+            Pour les agriculteurs, l’automne est aussi une période de réflexion. Les champs sont déjà en préparation pour l’année suivante, avec les sols fertilisés et les besoins pour le printemps anticipés.<br><br>
+            
+            L’hiver : le temps de repos<br><br>
+            
+            À partir de mi-novembre, la Ferme de Rutel entre dans une période de fermeture, marquant un temps de repos pour les champs. Après un travail acharné à fournir des fruits et légumes chaque saison, les terres se reposent, tandis que les agriculteurs se concentrent sur l’entretien des équipements et la préparation de la saison suivante. Bien que les visiteurs soient absents, les équipes poursuivent leur travail en coulisses pour anticiper les mois à venir. 
+            
+            À la Ferme de Rutel, le cycle des saisons est donc bien plus qu’un calendrier agricole. Les saisons sont le cœur de la vie agricole. Il montre la philosophie de respecter les rythmes de la nature. Du printemps qui éclôt à l’hiver qui repose, chaque période apporte ses défis et récompenses, pour les agriculteurs comme pour les visiteurs. C’est une manière de nous dire que la nature, elle aussi, a besoin de temps pour offrir le meilleur d’elle-même.
+          </p>
+        </div>
+
+        <!-- Image Carte -->
+        <img src="imgweb/image.png" alt="Carte de la ferme" class="map-image">
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Fonction pour afficher/masquer les boutons
+    function toggleMenu() {
+      var buttons = document.getElementById("nav-buttons");
+      if (buttons.style.display === "none" || buttons.style.display === "") {
+        buttons.style.display = "flex"; // Affiche les boutons
+      } else {
+        buttons.style.display = "none"; // Masque les boutons
+      }
+    }
+  </script>
+</body>
+</html>

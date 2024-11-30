@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esteban: Interviews</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #4c7022; /* Fond vert */
+      color: #ffffff; /* Texte blanc */
+      font-family: 'Italiana', serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .side-menu {
+      background-color: #2C481D; /* Fond vert foncé */
+      height: 100vh; /* Pleine hauteur */
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 3rem;
+      color: #ffffff;
+      text-align: center;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+
+    .nav-buttons {
+      display: none; /* Cache les boutons par défaut */
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: center;
+    }
+
+    .nav-buttons button {
+      background-color: #2C481D;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #4c7022;
+    }
+
+    .main-content {
+      padding: 30px;
+    }
+
+    .header-title {
+      font-size: 3rem; /* Taille ajustée */
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 100px; /* Espacement inférieur */
+      margin-top: -50px; /* Surélève le titre */
+    }
+
+    .text-content {
+      line-height: 1.6; /* Espacement ajusté entre les lignes */
+      margin-top: 10px;
+      background-color: #2C481D;
+      border: 10px solid #2C481D;
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .image-placeholder {
+      background-color: #cfcfcf; /* Fond gris clair */
+      height: 550px; /* Hauteur réduite */
+      width: 300; /* Pleine largeur du conteneur */
+      margin-right: 30; /* Centre l'image dans la colonne */
+    }
+
+    .row {
+      align-items: center; /* Aligne le texte et l'image verticalement */
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Barre latérale -->
+      <nav class="col-md-1 col-12 side-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- Boutons supplémentaires -->
+        <div class="nav-buttons" id="nav-buttons">
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/webdochome.html">Accueil</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocMarjo.html">Les Saisons à la ferme</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocLouis.html">Le groupe chapeau de paille</a></button>
+          <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/webdocarticle.html">Kilyann</a></button>
+        </div>
+      </nav>
+
+      <!-- Contenu principal -->
+      <main class="col-md-11 col-12 main-content">
+        <!-- Titre -->
+        <h1 class="header-title">
+          Esteban: Interviews exclusives avec les visiteurs
+        </h1>
+
+        <div class="row">
+          <!-- Texte -->
+          <div class="col-md-7 col-12">
+            <p class="text-content">
+              <strong>L'interview des clients de la cueillette de rutel :</strong> <br><br>
+
+              Nous sommes allés à la rencontre des clients de la cueillette de Rutel afin d’en apprendre plus sur leur vision de cet endroit. Nous avons eu la chance d’avoir une opposition entre des clientes habituées et une cliente qui n’était venue qu’une seule fois, ce qui nous a donné plusieurs points de vue différents sur l’expérience que l’on peut avoir en y allant.<br><br>
+
+Les premières clientes nous ont expliqué être là dans un cadre professionnel : elles accompagnaient des personnes en situation de handicap dans le cadre d’une activité pour pouvoir proposer du divertissement à ces personnes en les amenant ici. Mais dans le groupe, il y avait une habituée qui venait depuis plusieurs années, et elle a pu nous expliquer pourquoi elle venait ici au lieu d’aller en grande surface. Elle nous a expliqué que cela était une activité un peu plus physique que d’aller en grande surface et comment elle avait découvert cet endroit.<br><br>
+
+Puis nous avons pu interviewer une autre cliente qui, à l’opposé, n’était presque jamais venue. Elle a pu nous décrire ses premières impressions sur la cueillette, les produits qu’elle prend, et elle nous a parlé d’une activité qu’elle a pu faire avec son petit-fils. La cueillette propose plusieurs événements en fonction de la saison et de la période de l’année, pour les enfants comme pour les adultes, afin d’offrir une expérience en lien avec la saison, comme pour Halloween avec la cueillette de citrouilles.<br><br>
+
+Avec ces deux points de vue très différents, nous avons pu avoir une vision un peu plus profonde de ce lieu et une meilleure idée de ce qui attirait les gens à cette ferme.</p>
+          </div>
+
+          <!-- Vidéo -->
+          <div class="col-md-4 col-12">
+            <video width="700" height="400" controls>
+              <source src="video/video webdoc.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Fonction pour afficher/masquer les boutons
+    function toggleMenu() {
+      var buttons = document.getElementById("nav-buttons");
+      if (buttons.style.display === "none" || buttons.style.display === "") {
+        buttons.style.display = "flex"; // Affiche les boutons
+      } else {
+        buttons.style.display = "none"; // Masque les boutons
+      }
+    }
+  </script>
+</body>
+</html>
