@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aux racines de rutel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #4c7022; /* Fond vert similaire */
+      color: #ffffff; /* Texte blanc */
+      font-family: 'Italiana'; /* Style typographique */
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .container-fluid {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+    }
+    nav {
+      background-color: #2C481D; /* Couleur de la barre de navigation */
+      height: 100vh; /* Étend la navigation sur toute la hauteur */
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .nav-toggler {
+      font-size: 3rem;
+      cursor: pointer;
+    }
+    .nav-buttons {
+      display: none; /* Cache les boutons par défaut */
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      align-items: center;
+    }
+    .nav-buttons button {
+      background-color: #2C481D;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .nav-buttons button:hover {
+      background-color: #4c7022;
+    }
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+    .header-title {
+      font-size: 3rem;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .content-box {
+      margin-bottom: 30px;
+      margin-top: 50px; /* Descend les éléments */
+    }
+    .image-placeholder {
+      background-color: #cfcfcf;
+      height: 350px; /* Augmente la hauteur des images */
+      border: 3px solid white;
+    }
+    p {
+      margin-top: 20px; /* Décalage pour les paragraphes */
+      line-height: 2; /* Augmente l'espacement entre les lignes */
+      font-size: 1.2rem; /* Agrandit le texte pour une meilleure lisibilité */
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="col-md-1 col-12 d-flex flex-column justify-content-start py-3">
+      <!-- Barre latérale -->
+      <div class="text-center text-light">
+        <span class="fs-1 nav-toggler" onclick="toggleMenu()">☰</span>
+      </div>
+      <!-- Boutons du menu -->
+      <div class="nav-buttons" id="nav-buttons">
+        <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocEste.html">Inteview Avec les clients</a></button>
+        <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocMarjo.html">Les Saisons à la ferme</a></button>
+        <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/WebdocLouis.html">Le groupe chapeau de paille</a></button>
+        <button><a href="file:///C:/Users/Esteban/Documents/Travail%20cours/htmlnoctu/webdoc/webdocarticle.html">Kilyann</a></button>
+      </div>
+    </nav>
+    <main class="col-md-11 col-12">
+      <!-- Page Content -->
+      <h1 class="header-title">Aux racines de rutel</h1>
+      <div class="row">
+        <div class="col-md-6 col-12 content-box">
+          <img src="imgweb/accueilmagasin.png" class="image-placeholder" width="800" height="400">
+        </div>
+        <div class="col-md-6 col-12 content-box">
+          <p>
+            Bienvenue à la Ferme de Rutel!<br>
+ À travers notre webdocumentaire, plongez au cœur de la Ferme de Rutel!<br><br>
+Cette ferme, c’est avant tout une expérience unique pour les visiteurs. Découvrez leurs témoignages, leurs moments de partage et de connexion avec la nature. <br>
+Ici, chacun peuvent cueillir ses fruits et légumes, se balader dans les allées de champs et profiter d’un cadre paisible.<br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-12 content-box">
+          <p>
+            Ce lieu situé en pleine nature, à quelques minutes de Meaux, nous dévoile les secrets de son organisation au rythme des saisons. Découvrez comment chaque récolte est soigneusement préparée et mise à disposition des visiteurs grâce au travail collectif des équipes, les fameux Chapeaux de Paille.
+            <br><br>
+            Entre fruits, légumes et fleurs, la Ferme de Rutel est bien plus qu’un simple lieu de cueillette : c’est un espace de partage et de connexion avec la nature.<br>
+Partez à la découverte d’un site où chaque saison apporte son lot de saveurs et de couleurs.
+          </p>
+        </div>
+        <div class="col-md-6 col-12 content-box">
+          <img src="imgweb/chariot.png" width="650" height="375" class="image-placeholder"></img>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fonction pour afficher/masquer les boutons
+    function toggleMenu() {
+      var buttons = document.getElementById("nav-buttons");
+      if (buttons.style.display === "none" || buttons.style.display === "") {
+        buttons.style.display = "flex"; // Affiche les boutons
+      } else {
+        buttons.style.display = "none"; // Masque les boutons
+      }
+    }
+  </script>
+</body>
+</html>
