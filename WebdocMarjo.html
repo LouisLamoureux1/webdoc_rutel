@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aux racines de Rutel</title>
+  <title>Marjorie: Les saisons à la ferme</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -12,18 +12,11 @@
       color: #ffffff; /* Texte blanc */
       font-family: 'Italiana', serif;
       margin: 0;
-      text-align: center; /* Centre tout le texte */
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
+      text-align: center; /* Centre tout le texte */
     }
 
-    .container-fluid {
-      display: flex;
-      flex: 1;
-    }
-
-    nav {
+    .side-menu {
       background-color: #2C481D; /* Fond vert foncé */
       height: 100vh;
       position: sticky;
@@ -31,111 +24,137 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 20px;
     }
 
     .menu-icon {
       font-size: 3rem;
       color: #ffffff;
+      text-align: center;
+      margin: 20px 0;
       cursor: pointer;
-      margin-bottom: 20px;
     }
 
     .nav-buttons {
       display: none; /* Cache les boutons par défaut */
       flex-direction: column;
       gap: 10px;
-    }
-
-    .nav-buttons button {
-      background-color: #2C481D;
-      border: none;
-      color: white;
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      text-align: center;
-      width: 90%;
-    }
-
-    .nav-buttons button:hover {
-      background-color: #4c7022;
+      margin-top: 20px;
+      align-items: center;
     }
 
     .nav-buttons a {
       text-decoration: none;
-      color: inherit;
+      color: white;
+      background-color: #2C481D;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
     }
 
-    main {
-      flex: 1;
-      padding: 20px;
+    .nav-buttons a:hover {
+      background-color: #4c7022;
     }
 
-    h1 {
-      margin-top: 30px;
-      font-size: 2.5rem;
+    .main-content {
+      padding: 30px;
     }
 
-    p {
+    .header-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .calendar-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .article-section {
+      margin-top: 40px;
+    }
+
+    .article-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .text-content {
       line-height: 1.8;
-      font-size: 1.2rem;
-      margin-top: 20px;
+      text-align: center;
     }
 
-    .image-placeholder {
-      display: block;
-      margin: 30px auto;
-      border: 3px solid white;
-      width: 80%;
+    .map-image {
+      margin-top: 40px;
+      width: 100%;
       max-width: 600px;
-      height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
   <div class="container-fluid">
-    <!-- Barre latérale -->
-    <nav class="col-md-1 col-12">
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
-      <div class="nav-buttons" id="nav-buttons">
-        <button><a href="index.html">Accueil</a></button>
-        <button><a href="WebdocMarjo.html">Les Saisons à la ferme</a></button>
-        <button><a href="WebdocLouis.html">Le groupe Chapeau de Paille</a></button>
-        <button><a href="WebdocEste.html">Interview avec les clients</a></button>
-        <button><a href="webdocarticle.html">Kilyann</a></button>
-      </div>
-    </nav>
+    <div class="row">
+      <!-- Barre latérale -->
+      <nav class="col-md-1 col-12 side-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- Boutons supplémentaires -->
+        <div class="nav-buttons" id="nav-buttons">
+          <a href="index.html">Accueil</a>
+          <a href="WebdocMarjo.html">Les Saisons à la ferme</a>
+          <a href="WebdocLouis.html">Le groupe chapeau de paille</a>
+          <a href="WebdocEste.html">Interview Avec les clients</a>
+          <a href="webdocarticle.html">Kilyann</a>
+        </div>
+      </nav>
 
-    <!-- Contenu principal -->
-    <main class="col-md-11 col-12">
-      <h1>Aux racines de Rutel</h1>
-      <div>
-        <img src="./imgweb/accueilmagasin.png" alt="Ferme" class="image-placeholder">
-        <p>
-          Bienvenue à la Ferme de Rutel!<br>
-          Découvrez nos paysages paisibles et vivez une expérience unique en cueillant vos fruits et légumes au gré des saisons. <br><br>
-          Située à quelques minutes de Meaux, la Ferme de Rutel offre une connexion authentique avec la nature. Entre témoignages de visiteurs, travail des équipes, et cycle des saisons, plongez dans l’histoire de ce lieu unique.
-        </p>
-      </div>
-      <div>
-        <img src="./imgweb/chariot.png" alt="Chariot de récolte" class="image-placeholder">
-        <p>
-          Chaque saison apporte son lot de saveurs et couleurs, transformant la ferme en un espace de partage et de découvertes. <br><br>
-          Venez profiter d’une expérience immersive au cœur de la campagne, où chaque récolte reflète le travail minutieux de nos équipes.
-        </p>
-      </div>
-    </main>
+      <!-- Contenu principal -->
+      <main class="col-md-11 col-12 main-content">
+        <!-- Titre -->
+        <h1 class="header-title">
+          Marjorie: Les saisons à la ferme : <br> calendrier et rythmes de la nature
+        </h1>
+
+        <!-- Section Calendrier -->
+        <div class="calendar-section">
+          <img src="imgweb/calendrier.png" width="650" height="400" alt="Calendrier">
+        </div>
+
+        <!-- Section Article -->
+        <div class="article-section">
+          <div class="article-title">Article:</div>
+          <p class="text-content">
+            À la Ferme de Rutel, les saisons rythment la vie des agriculteurs. <br>
+            En Seine-et-Marne, à la Ferme de Rutel, chaque saison raconte une histoire différente. Du réveil du printemps aux premières pousses et aux récoltes de l’été, en passant par les préparations à l’automne et la pause hivernale, le calendrier de la ferme suit un rythme naturel où chaque mois a son importance.<br><br>
+            
+            <strong>Le printemps : la renaissance</strong><br><br>
+            Avec l’arrivée des premiers rayons de soleil et les feuilles qui poussent, la ferme s’anime...
+          </p>
+        </div>
+
+        <!-- Image Carte -->
+        <img src="imgweb/image.png" alt="Carte de la ferme" class="map-image">
+      </main>
+    </div>
   </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
+    // Fonction pour afficher/masquer les boutons
     function toggleMenu() {
-      const buttons = document.getElementById("nav-buttons");
-      buttons.style.display = (buttons.style.display === "none" || !buttons.style.display) ? "flex" : "none";
+      var buttons = document.getElementById("nav-buttons");
+      if (buttons.style.display === "none" || buttons.style.display === "") {
+        buttons.style.display = "flex";
+      } else {
+        buttons.style.display = "none";
+      }
     }
   </script>
 </body>
