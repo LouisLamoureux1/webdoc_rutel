@@ -14,13 +14,26 @@
       font-family: 'Italiana', serif;
       min-height: 100vh;
       margin: 0;
-      display: flex;
-      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
     }
 
-    .container-fluid {
-      flex: 1;
+    .side-menu {
+      background-color: #2C481D; /* Fond vert foncé */
+      height: 100vh;
+      position: sticky;
+      top: 0;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-icon {
+      font-size: 3rem;
+      color: #ffffff;
+      text-align: center;
+      margin: 20px 0;
+      cursor: pointer;
     }
 
     nav {
@@ -41,10 +54,11 @@
     }
 
     .nav-buttons {
-      display: none;
+      display: none; /* Cache les boutons par défaut */
       flex-direction: column;
       gap: 10px;
-      width: 100%;
+      margin-top: 20px;
+      align-items: center;
     }
 
     .nav-buttons button {
@@ -90,6 +104,15 @@
       border: 3px solid white;
     }
 
+    .map-image {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
     p {
       margin-top: 10px;
       line-height: 1.8;
@@ -100,15 +123,17 @@
 
 <body>
   <div class="container-fluid">
-    <nav class="col-md-2 col-12 d-flex flex-column justify-content-start">
-      <span class="fs-1 nav-toggler" onclick="toggleMenu()">☰</span>
-      <div class="nav-buttons" id="nav-buttons">
-        <button><a href="index.html">Accueil</a></button>
-        <button><a href="WebdocMarjo.html">Les Saisons à la ferme</a></button>
-        <button><a href="WebdocLouis.html">Le groupe chapeau de paille</a></button>
-        <button><a href="WebdocEste.html">Inteview Avec les clients</a></button>
-        <button><a href="webdocarticle.html">Kilyann</a></button>
-    </nav>
+    <nav class="col-md-1 col-12 side-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <!-- Boutons supplémentaires -->
+        <div class="nav-buttons" id="nav-buttons">
+          <a href="index.html">Accueil</a>
+          <a href="WebdocMarjo.html">Les Saisons à la ferme</a>
+          <a href="WebdocLouis.html">Le groupe chapeau de paille</a>
+          <a href="WebdocEste.html">Interview Avec les clients</a>
+          <a href="webdocarticle.html">Kilyann</a>
+        </div>
+      </nav>
     <main class="col-md-10 col-12">
       <h1 class="header-title">Aux racines de Rutel</h1>
       <div class="row">
@@ -132,17 +157,23 @@
           </p>
         </div>
         <div class="col-md-6 col-12 content-box">
-          <img src="./imgweb/chariot.png" class="image-placeholder" alt="Chariot rempli de produits frais">
+          <img src="./imgweb/chariot.png" class="map-image" alt="Chariot rempli de produits frais">
         </div>
       </div>
     </main>
   </div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
+    // Fonction pour afficher/masquer les boutons
     function toggleMenu() {
-      const buttons = document.getElementById("nav-buttons");
-      buttons.style.display = buttons.style.display === "flex" ? "none" : "flex";
+      var buttons = document.getElementById("nav-buttons");
+      if (buttons.style.display === "none" || buttons.style.display === "") {
+        buttons.style.display = "flex";
+      } else {
+        buttons.style.display = "none";
+      }
     }
   </script>
 </body>
