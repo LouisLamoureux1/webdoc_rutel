@@ -63,7 +63,7 @@
 
         .side-menu {
             background-color: #2C481D; /* Fond vert foncé */
-            height: 100vh; /* Pleine hauteur */
+            height: 100vh;
             position: sticky;
             top: 0;
             display: flex;
@@ -79,18 +79,19 @@
             align-items: center;
         }
 
-        .nav-buttons button {
-            background-color: #2C481D;
-            border: none;
+        .nav-buttons a {
+            text-decoration: none;
             color: white;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
+            background-color: #2C481D;
+            padding: 10px 20px;
             border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
         }
 
         .nav-buttons button:hover {
-            background-color: #455E0D;
+            background-color: #4c7022;
         }
 
         .col-10 {
@@ -100,7 +101,7 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid text-white">
+    <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-md-1 side-menu">
@@ -108,10 +109,10 @@
                 <!-- Boutons supplémentaires -->
                 <div class="nav-buttons" id="nav-buttons">
                     <button><a href="index.html">Accueil</a></button>
-          <button><a href="WebdocMarjo.html">Les Saisons à la ferme</a></button>
-          <button><a href="WebdocLouis.html">Le groupe chapeau de paille</a></button>
-          <button><a href="WebdocEste.html">Inteview Avec les clients</a></button>
-          <button><a href="webdocarticle.html">Kilyann</a></button>
+                    <button><a href="WebdocMarjo.html">Les Saisons à la ferme</a></button>
+                    <button><a href="WebdocLouis.html">Le groupe chapeau de paille</a></button>
+                    <button><a href="WebdocEste.html">Inteview Avec les clients</a></button>
+                    <button><a href="webdocarticle.html">Kilyann</a></button>
                 </div>
             </div>
 
@@ -146,11 +147,11 @@
         // Fonction pour afficher/masquer les boutons
         function toggleMenu() {
             var buttons = document.getElementById("nav-buttons");
-            if (buttons.style.display === "none" || buttons.style.display === "") {
-                buttons.style.display = "flex"; // Affiche les boutons sous le menu
-            } else {
-                buttons.style.display = "none"; // Masque les boutons
-            }
+                if (buttons.style.display === "none" || buttons.style.display === "") {
+                    buttons.style.display = "flex";
+              } else {
+                    buttons.style.display = "none";
+              }
         }
     </script>
 </body>
